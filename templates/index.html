@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Lost & Found{% endblock %}
+
+{% block content %}
+
+<div class="row align-items-center g-4 mb-4">
+  <div class="col-lg-7">
+    <div class="p-4 bg-white rounded-4 shadow-sm border">
+      <h1 class="fw-bold mb-2">Smart Lost & Found System</h1>
+      <p class="text-muted mb-4">
+        Report lost or found items at Kisii University. Search listings, view matches,
+        and claim items securely.
+      </p>
+
+      <!-- Search bar (frontend only for now) -->
+      <form class="d-flex gap-2" action="#" method="get">
+        <input type="text" class="form-control" placeholder="Search items (e.g. ID, phone, wallet)">
+        <button class="btn btn-primary px-4">Search</button>
+      </form>
+
+      <div class="mt-4 d-flex flex-wrap gap-2">
+        <a href="/report-lost" class="btn btn-outline-danger">Report Lost Item</a>
+        <a href="/report-found" class="btn btn-outline-success">Report Found Item</a>
+        <a href="/found-items" class="btn btn-outline-primary">Browse Found Items</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="p-4 bg-primary text-white rounded-4 shadow-sm">
+      <h5 class="fw-bold mb-3">How it works</h5>
+      <ol class="mb-0">
+        <li class="mb-2">Report a lost or found item with details + photo.</li>
+        <li class="mb-2">The system lists items and suggests possible matches.</li>
+        <li class="mb-2">Admins verify claims before items are released.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- Quick Stats (dummy numbers for now) -->
+<div class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h6 class="text-muted">Lost Reports</h6>
+        <h3 class="fw-bold mb-0">128</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h6 class="text-muted">Found Reports</h6>
+        <h3 class="fw-bold mb-0">96</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h6 class="text-muted">Items Returned</h6>
+        <h3 class="fw-bold mb-0">74</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Latest Found Items Preview (dummy cards) -->
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h4 class="fw-bold mb-0">Latest Found Items</h4>
+  <a href="/found-items" class="text-decoration-none">View all →</a>
+</div>
+
+<div class="row g-3">
+  <!-- Card 1 -->
+  <div class="col-md-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <span class="badge bg-success mb-2">Found</span>
+        <h5 class="fw-bold">Student ID Card</h5>
+        <p class="text-muted small mb-2">Found near Library</p>
+        <p class="small">
+          Blue lanyard, Kisii University ID.
+        </p>
+        <a href="/item" class="btn btn-sm btn-outline-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-md-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <span class="badge bg-success mb-2">Found</span>
+        <h5 class="fw-bold">Samsung Phone</h5>
+        <p class="text-muted small mb-2">Found at Cafeteria</p>
+        <p class="small">
+          Black case, cracked screen protector.
+        </p>
+        <a href="/item" class="btn btn-sm btn-outline-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-md-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <span class="badge bg-success mb-2">Found</span>
+        <h5 class="fw-bold">Wallet</h5>
+        <p class="text-muted small mb-2">Found near Hostels</p>
+        <p class="small">
+          Brown leather wallet with some cards.
+        </p>
+        <a href="/item" class="btn btn-sm btn-outline-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

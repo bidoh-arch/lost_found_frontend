@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}Item Details | Lost & Found{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+  <div>
+    <h3 class="fw-bold mb-1">Item Details</h3>
+    <p class="text-muted mb-0">Full information about the reported item.</p>
+  </div>
+
+  <a href="/found-items" class="btn btn-outline-secondary">← Back to Items</a>
+</div>
+
+<div class="row g-4">
+
+  <!-- LEFT: Item Info -->
+  <div class="col-lg-7">
+
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4">
+
+        <!-- Dummy status for now -->
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+          <span class="badge bg-success">Found</span>
+          <span class="badge bg-warning text-dark">Unclaimed</span>
+        </div>
+
+        <h4 class="fw-bold mb-2">Samsung Phone</h4>
+        <p class="text-muted mb-4">
+          Black case, cracked screen protector. Found near the cafeteria.
+        </p>
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <div class="p-3 rounded-4 bg-light border">
+              <div class="small text-muted">Category</div>
+              <div class="fw-semibold">Phone</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 rounded-4 bg-light border">
+              <div class="small text-muted">Date Reported</div>
+              <div class="fw-semibold">17 Feb 2026</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 rounded-4 bg-light border">
+              <div class="small text-muted">Location Found</div>
+              <div class="fw-semibold">Cafeteria</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 rounded-4 bg-light border">
+              <div class="small text-muted">Current Storage</div>
+              <div class="fw-semibold">Security Office</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Claim section -->
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h5 class="fw-bold mb-2">Want to claim this item?</h5>
+        <p class="text-muted mb-3">
+          Claims require verification by an admin before the item is released.
+        </p>
+
+        <a href="/claim" class="btn btn-primary px-4">Proceed to Claim</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: Image + Contact -->
+  <div class="col-lg-5">
+
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-3">
+        <div class="ratio ratio-4x3 rounded-4 overflow-hidden bg-light border">
+          <!-- Placeholder image -->
+          <img
+            src="https://via.placeholder.com/800x600?text=Item+Image"
+            class="w-100 h-100 object-fit-cover"
+            alt="Item Image"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h5 class="fw-bold mb-2">Report Information</h5>
+        <p class="text-muted small mb-3">
+          Some details may be hidden until a claim is verified.
+        </p>
+
+        <div class="mb-3">
+          <div class="small text-muted">Reported By</div>
+          <div class="fw-semibold">Anonymous User</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="small text-muted">Contact</div>
+          <div class="fw-semibold">Hidden until claim is approved</div>
+        </div>
+
+        <div class="alert alert-info mb-0">
+          <strong>Tip:</strong> If you are the owner, provide proof during claim.
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

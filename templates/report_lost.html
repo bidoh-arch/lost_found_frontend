@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Report Lost Item | Lost & Found{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <div>
+    <h3 class="fw-bold mb-0">Report Lost Item</h3>
+    <p class="text-muted mb-0">Fill in the details of the item you lost.</p>
+  </div>
+</div>
+
+<div class="card shadow-sm border-0">
+  <div class="card-body p-4">
+
+    <!-- Frontend only for now -->
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <label class="form-label">Item Title</label>
+          <input type="text" class="form-control" placeholder="e.g. Black Samsung Phone" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Category</label>
+          <select class="form-select" required>
+            <option value="">Select category...</option>
+            <option>Phone</option>
+            <option>Student ID</option>
+            <option>Laptop</option>
+            <option>Wallet</option>
+            <option>Keys</option>
+            <option>Bag</option>
+            <option>Book</option>
+            <option>Money</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" rows="4" placeholder="Describe the item (color, brand, unique features, etc.)" required></textarea>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Location Lost</label>
+          <input type="text" class="form-control" placeholder="e.g. Library, Hostel A, Cafeteria" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Date Lost</label>
+          <input type="date" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Upload Image (optional)</label>
+          <input type="file" class="form-control" accept="image/*">
+          <div class="form-text">If you have a photo, it helps matching.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Preferred Contact</label>
+          <select class="form-select">
+            <option>Email</option>
+            <option>Phone</option>
+          </select>
+          <div class="form-text">Backend will later use this for notifications.</div>
+        </div>
+
+      </div>
+
+      <hr class="my-4">
+
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger px-4">Submit Lost Report</button>
+        <a href="/dashboard" class="btn btn-outline-secondary">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

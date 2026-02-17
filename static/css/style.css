@@ -1,0 +1,15 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+}
+
+.card {
+  border-radius: 14px;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+}
